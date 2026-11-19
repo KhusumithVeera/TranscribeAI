@@ -1,0 +1,6 @@
+{
+  "name": "ClipScript",
+  "description": "Document-first video editor: transcribe spoken video with word-level timestamps, delete text to cut matching video and audio, and export synchronized MP4.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

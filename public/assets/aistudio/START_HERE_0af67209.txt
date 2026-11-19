@@ -1,0 +1,15 @@
+CLIPSCRIPT MVP - GOOGLE AI STUDIO HANDOFF
+
+Files:
+- ClipScript_AI_Studio_Build_Spec.Rmd: full product requirements and build instructions.
+- clipscript_45_second_demo.mp4: 45-second narrated test video (45.0 seconds, H.264/AAC).
+
+How to use:
+1. Open Google AI Studio and switch to Build mode.
+2. Start a new web app project.
+3. Attach both files to the project.
+4. Paste this instruction:
+
+   Read ClipScript_AI_Studio_Build_Spec.Rmd and build the complete working full-stack app described in it. Use clipscript_45_second_demo.mp4 as the first end-to-end acceptance-test file. Implement real transcription with word-level timestamps, transcript-based cuts to both audio and video, undo/redo, preview, and MP4 export. Do not stop at a mockup; run the acceptance tests in the spec and fix issues.
+
+Note: A visual reference URL/image was not included in the original request, so the first build follows the minimal dark/teal design direction specified in the Rmd.

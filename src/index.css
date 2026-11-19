@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    font-family: var(--font-sans);
+    background-color: #F7F4EF;
+    color: #14181F;
+  }
+
+  h1, h2, .font-serif-editorial {
+    font-family: var(--font-display);
+  }
+}
+
+/* Luminous atmospheric multi-stop background color gradient */
+.bg-studio-gradient {
+  background-color: #F7F4EF;
+  background-image:
+    radial-gradient(62% 52% at 10% 6%, rgba(236, 214, 200, 0.52) 0%, rgba(236, 214, 200, 0) 68%),
+    radial-gradient(56% 52% at 92% 10%, rgba(196, 224, 222, 0.56) 0%, rgba(196, 224, 222, 0) 66%),
+    radial-gradient(58% 54% at 52% 96%, rgba(217, 214, 236, 0.48) 0%, rgba(217, 214, 236, 0) 70%),
+    linear-gradient(135deg, #FAF8F4 0%, #F3EFEA 46%, #EEF3F5 100%);
+  background-attachment: fixed;
+}
+
+/* Subtle glass panel surface for editor and upload zones */
+.surface-glass {
+  background-color: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Refined scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(20, 24, 31, 0.16);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 24, 31, 0.3);
+}
+
+/* Subtle diagonal hatch for cut ranges on the mini timeline */
+.cut-hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(185, 28, 28, 0.2),
+    rgba(185, 28, 28, 0.2) 4px,
+    rgba(185, 28, 28, 0.06) 4px,
+    rgba(185, 28, 28, 0.06) 8px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
